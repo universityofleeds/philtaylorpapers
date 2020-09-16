@@ -1,0 +1,76 @@
+      .content h1 a, .content h1 a:hover, .header-bg {
+        color:#FFFFFF;
+        background:#D90134;
+        background:-webkit-gradient(linear,left top,right top, from(#D90134), to(#D90134));
+        background:-webkit-linear-gradient(left, #D90134, #D90134);
+        background:-o-linear-gradient(left, #D90134, #D90134);
+        background:-moz-linear-gradient(left,#D90134,#D90134);}
+      .content h1 a, .content h1 a:hover {
+        text-shadow:1px 2px 1px #303030;}
+      .content-main h2 {
+        color:#5C5B56;}
+      .content-main h3 {
+        color:#5C5B56;}
+      .content-main h4 {
+        color:#5C5B56;}
+      .content-main h5 {
+        color:#5C5B56;}
+      .content-main h6 {
+        color:#5C5B56;}
+      .content-main .widgetised-page .welcome .widget-content, .content-main .widgetised-page .welcome .widget-content h3, .content-main .widgetised-page .header-bg {
+        background:#FFFFFF;
+        color:#000000 !IMPORTANT;
+        padding:10px;}
+      img.header-bg {
+        background:#D90134;}
+      .quote-block blockquote p:first-child {
+        background:#D90134;
+        color:#FFFFFF;
+        padding:10px;}
+      .quote-block blockquote p:first-child::after {
+        border-color:#D90134 transparent transparent;}
+      /* links */
+      .content-main a {
+        color:#D90134;}
+      .content-main a:visited {
+        color:#C4012F;}
+      .content-main a:hover {
+        color:#E80138;}
+      .content-main a:active {
+        color:#CD592A;}
+      .accordion h3:hover {
+        border-bottom:1px solid #D90134 !IMPORTANT;}
+      .accordion h3:hover span.arrow {
+        border-color:#D90134 !IMPORTANT;
+        color:#D90134 !IMPORTANT;}
+      /* footer links */
+      .content-info a {
+        color:#D90134;}
+      .content-info a:hover {
+        color:#E80138;}
+      /* breadcrumb links */
+      .breadcrumbs li a {
+        color:#D90134;}
+      .breadcrumbs li a:hover {
+        color:#E80138;}
+      /* left menu links */
+      .left-menu a {
+        color:#D90134;}
+      .left-menu a:hover, .left-menu li.current-item > a {
+        color:#E80138;}
+      /* right menu links */
+      .site-sidebar a {
+        color:#312F2B;}
+      .site-sidebar a:hover {
+        color:#D90134;}
+      .slideshow .slideshow-caption, .figcaption {
+        color:#FFFFFF;
+        background:#D90134;
+        background:rgba(217,1,52,0.7);}
+      .slideshow .slideshow-caption .slideshow-controls a {
+        color:#CCCCCC;}
+      .slideshow .slideshow-caption .slideshow-controls a:hover, .slideshow .slideshow-caption .slideshow-controls a.currentslide {
+        color:#FFFFFF;}
+table, table tr, table tr td {
+  border:0;
+}

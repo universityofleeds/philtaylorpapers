@@ -1,0 +1,56 @@
+DirectoryIndex index.html
+ErrorDocument 404 /papers/404.html
+
+RewriteEngine On
+RewriteBase /papers/
+
+#########################################
+# host redirection
+#########################################
+
+RewriteCond %{HTTP_HOST} .
+RewriteCond %{HTTP_HOST} !^media\.leeds\.ac\.uk [NC]
+RewriteRule (.*) http://media.leeds.ac.uk/papers/$1 [R=301,L] 
+
+#########################################
+# hilarious
+#########################################
+
+RewriteRule ^ids/exhibits/229/And_I_May_I_Say_Nothing_The_Ephebe.pdf https://drive.google.com/file/d/0B7rIRrZceLXCLUo3Q0pDVzZsZ0NEVXVvS3owM19FRE9tMlpB/view
+
+#########################################
+# redirections for Louis Le Prince
+#########################################
+
+# redirect URLs with querystring parameters
+RewriteCond %{QUERY_STRING} ^.*outfit=llp.*$ [NC]
+RewriteRule ^vp01\.cfm$ http://screenwritingresearch.com/? [R=301,L]
+
+# redirect requests for specific documents
+RewriteRule ^llp.*$ http://screenwritingresearch.com/ [R=301,L]
+
+#########################################
+# redirections for Irish Diaspora
+#########################################
+
+# redirect URLs with querystring parameters
+RewriteCond %{QUERY_STRING} ^.*outfit=ids.*$ [NC]
+RewriteRule ^vp01\.cfm$ http://www.irishdiaspora.net/ids? [R=301,L]
+
+# redirect requests for specific documents
+RewriteRule ^ids(.*)$ http://www.irishdiaspora.net/ids$1 [R=301,L]
+
+#########################################
+# Trackbacks
+#########################################
+
+# trackbacks go to 404 page
+RewriteRule .*/trackback/$ /papers/404.html
+
+#########################################
+# Catch-all
+#########################################
+
+# catch-all redirection for coldfusion pages
+RewriteRule ^(vp01\.cfm|index\.cfm)/?$ index.html? [R=301,L]
+
