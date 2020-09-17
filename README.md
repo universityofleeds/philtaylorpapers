@@ -1,6 +1,6 @@
 # Phil Taylor Papers
 
-## originally made available at media.leeds.ac.uk/papers
+## Archive originally made available at media.leeds.ac.uk/papers
 
 Professor Phil Taylor, Professor of International Communications, one of the field's outstanding scholars and a founding member of the Institute of Communications Studies at the University of Leeds, died in December 2010.
 
