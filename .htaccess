@@ -10,7 +10,7 @@ RewriteBase /papers/
 
 RewriteCond %{HTTP_HOST} .
 RewriteCond %{HTTP_HOST} !^media\.leeds\.ac\.uk [NC]
-RewriteRule (.*) http://media.leeds.ac.uk/papers/$1 [R=301,L] 
+RewriteRule (.*) https://universityofleeds.github.io/philtaylorpapers//$1 [R=301,L] 
 
 #########################################
 # hilarious
