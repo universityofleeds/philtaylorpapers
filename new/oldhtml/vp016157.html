@@ -1,99 +1,0 @@
-<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
-</script>
-<script type="text/javascript">
-_uacct = "UA-1846923-1";
-urchinTracker();
-</script>  
-<!-- This document was created with HomeSite 2.5 -->
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
-
-
-
-<HTML>
-
-<!-- Mirrored from 127.0.0.1:8500/ICSWEB08/wwwroot/papers/vp01.cfm?outfit=pmt&folder=141&paper=2766 by HTTrack Website Copier/3.x [XR&CO'2013], Fri, 19 Jul 2013 13:38:48 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
-<HEAD>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-<!-- (<a href='http://www.leeds.ac.uk/ics'><b>The Institute of Communications Studies</b></a>, <a href='http://www.leeds.ac.uk'>University of Leeds</a>, UK) -->
-<TITLE>The Voice of America: First on the Internet by Chris Kern</TITLE>
-<meta name="description" content="Phil Taylor's Web Site at thepapersonline: the online academic journal service">
-<meta name="keywords" content="The Voice of America: First on the Internet by Chris Kern">
-
-</HEAD>
-
-<body bgcolor="gray" topmargin=0 leftmargin=0 marginheight=0 marginleft=0 link="Navy" vlink="#585858">
-<center>
-<table BORDER=0 CELLSPACING=0 CELLPADDING=0 VALIGN="TOP" width="90%">
-<tr><td></td><TD bgcolor="gray" align="left"><BR><table border=0 cellspacing=1 cellpadding=0 bgcolor="silver"><tr><td><FONT SIZE="-2" FACE="Arial" color="white">&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="index8f06.html?outfit=pmt">Phil Taylor's Web Site</a>&nbsp;&nbsp;&nbsp;&nbsp;</td></tr></table></td></tr><TR>
-<td bgcolor="Gray" valign="center" align="right"><IMG SRC="graphics/toptriangle.gif" WIDTH=46 HEIGHT=56 BORDER=0></td>
-
-
-
-<td bgcolor="blue" valign="bottom" align="left"> <FONT SIZE="+3" FACE="Arial" color="white"><B>&nbsp;Phil Taylor's Web Site</B></FONT>
-</td></tr><tr>
-
-<td valign=top align=right bgcolor="gray"><IMG SRC="graphics/blankside.gif" BORDER=0></td><td ALIGN="LEFT" VALIGN="TOP" bgcolor="white" width="100%" cellspacing=0 cellpadding=0>
-
-<table border=0 cellspacing=0 cellpadding=0 width="100%"><Tr><td bgcolor="#D4D4D4"><FONT SIZE="-1" FACE="Arial" color="black">&nbsp;<a href='http://www.leeds.ac.uk/ics'><b>The Institute of Communications Studies</b></a>, <a href='http://www.leeds.ac.uk/'>University of Leeds</a>, UK <br><BR></td></tr></table><font face="arial" size="2">
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table border=0 cellspacing=10 cellpadding=10 width="100%"><tr><td valign="top"><font face="arial" size="2">
-
-
-
-
-<A HREF="vf01767d.html?folder=141&amp;outfit=pmt"><font face="arial" size="1">BACK TO : INTERNATIONAL BROADCASTING (see also Public Diplomacy)</font></A>
-
-<BR><BR>
-
-<FONT SIZE="+1" FACE="Arial">The Voice of America: First on the Internet by Chris Kern</FONT><BR>
-
-
-
-
-
-
-<BR>
-
-
-
-<br>
-
-
-
-
-
-
-
-Sent via email<br><br><br>The Voice of America: First on the Internet<br><br><br><br>The Voice of America, as far as I am aware, was the first broadcast news organization in the world to offer continuously updated program product on the public Internet.<br><br>I cooked up the idea to put our news on the Internet during the summer of 1993 in consultation with my boss, Joe Bruns, a career government employee who was temporarily serving as acting director of the broadcasting bureau of the old United States Information Agency.  I don't recall the details of our discussions, but they were very informal.  I basically said, "you know, we could do this" and Joe essentially replied, "sure, go ahead."<br><br>There were two obstacles: one technical, the other bureaucratic.  Needless to say, the technical part was the easy part.  At the time, I was chief of the VOA Computer Services Division, which provided the information technology used by the news and broadcast staffs, so I didn't need any resources beyond those already at my disposal.  While our internal network protocol was XNS, I had registered an IP network bloc in 1991 to facilitate conversion to the Internet Protocol and we were already connected to the public Internet through UUNET.  I carved out a subnet for a DMZ network (we called it, and still do, the "No Man's LAN") on which to install our public servers.  My network operations manager, Al Brown, and I designed a primitive firewall based on Cisco router packet filters.<br><br>The Wire<br><br>I decided that our first public product would be our News and English Broadcasts radio newswire.  As the name implies, this was a wire service -- hitherto available only internally to our broadcasters -- that carried the texts of the reports by our staff correspondents and "stringers'' (contract reporters).  Its content was original material prepared by our central newsroom, so we didn't have to worry about copyright clearances, and it was pretty unusual stuff to offer electronically back then, when you couldn't even find commercial newswires such as the Associated Press or Reuter on the 'Net.  Plus it was just simple text, which meant it would have the widest possible audience.<br><br>The newswire was already available internally in machine-readable form, as a serial stream.  Since we had a 24-hour news operation and I wanted to update the contents of the Internet service continuously, we needed a completely hands-off automated solution to publish it.  I developed software to break the stream into separate stories, parse the titles and render them into strings that could serve as file names, and push the individual news reports up to a directory hierarchy on a publicly accessible server.  I think I originally wrote the code entirely in awk, then rebuilt some components is C later, either to improve performance or to provide robustness in dealing with failures of the input stream.  I had everything running smoothly in a couple of days.  (It continued to run, without a hiccup excepting rare hardware failures, for the next seven years.)<br><br>Bureaucratic Politics<br><br>The politics were more complicated.  First, we needed a legal opinion that what we were planning to do would not violate a provision of the Smith-Mundt Act that prohibited us from trying to influence domestic American public opinion.  The USIA general counsel sent one of his lawyers to talk to me.  It was a hard sell at first -- the lawyer initially seemed to think any traffic on the Internet had to be directed explicitly from the sender to the recipient, in the manner of electronic mail -- but over the course of several sessions I was able to wear her down.  It helped, I think, that I was a lawyer myself.  I ultimately persuaded her that putting VOA program product on the Internet was analogous to transmitting it via shortwave radio: residents of the United States could receive our shortwave broadcasts if they wanted to, although they weren't the intended audience and we didn't do anything to encourage them.  In fact, we even turned down requests from within the United States for copies of our program schedules.  (Not exactly great public relations, but that was the then-current management edict.)  In December, 1993, I received a formal opinion sanctioning the distribution of VOA news as long as we didn't "undertake any purposeful, affirmative steps to make domestic audiences aware of Agency program materials on [the] Internet or assist domestic access in any way.''<br><br>A second bureaucratic objection took me completely by surprise.  The News Division balked at having the texts of their correspondent reports automagically uploaded to a public Internet server.  On rare occasion, an error would be discovered in a report after it had been transmitted on our internal newswire, and the newsroom would issue a "kill" notice informing the VOA broadcast services that it could no longer be used.  The kill notice immediately put an end to any further dissemination via radio, but obviously that wouldn't work with an erroneous report that had been posted to the 'Net.  I don't recall how I talked my way out of that one.  I'd like to think I persuaded the News Division management that there was nothing to fear from the public disclosure of an occasional error, but I suspect I simply promised that I or a member of my staff would pluck any killed stories from the server the instant we were notified of them.<br><br>On Jan. 31, 1994, we announced the availability of the newswire service on several relevant newsgroups.  Initially, we served the files via FTP and the Gopher Protocol.  Those were the primary vehicles for interactive dissemination of files on the public Internet in 1994, although it wasn't long before we added HTTP.<br><br>Internet Audio<br><br>By the time of the newswire announcement, I was already working on a way to put audio files on our public server.  Again, the goal was to provide news, continuously updated, and since there was no staff to support this effort manually we needed an automated solution.  Al Brown, my network operations guy, had previously been a VOA radio technician and he arranged to have his erstwhile colleagues pull dual analog sound cables into our machine room.  These he wired into the audio input jacks of two Sun workstations -- SPARCstation 2s, if memory serves -- where we sampled and encoded the audio streams into Sun's AU audio file format.  I wrote a collection of Korn Shell and awk scripts to digitize the audio, collect the contents, name the files and install them on our public server.<br><br>We announced the audio service in August, 1994, again using FTP and Gopher to distribute the files.  The recording schedule had to be carefully coordinated with the VOA Traffic Branch so that, for example, a Russian newscast was actually playing out on our audio source when the software expected one.  Occasionally, we got out of synch with the traffic people, and would receive a flurry of email -- well, maybe four or five messages, which was quite a reaction in those days -- complaining that the evening Hindi program was actually Chinese.  Initially, we provided hourly newscasts in English and at least a morning and evening newscast (based on the time of day in the target audience area) in 14 other languages.  We subsequently expanded the offering -- to slightly more than 20 languages, I think.<br><br>The Veep Speaks<br><br>Shortly before we launched the audio service, President Bill Clinton appointed a new VOA director, Geoff Cowan, who turned out to be an enthusiastic supporter of our presence on the Internet almost from the day he arrived.  I don't know whether I had even been introduced to him when, one morning early in his tenure, he showed up quite unexpectedly in my tiny basement office, told me he had heard I was already offering the newswire and had plans for audio, and asked how he could help.  It was then or shortly thereafter that Geoff and I first started talking about setting up an "Internet desk" in the newsroom, although subsequent budget reductions postponed that initiative for several years, by which time he had left for the Annenberg School for Communication at the University of Southern California.  Geoff also introduced me to Rob Glaser, the founder of a company then called Progressive Networks, which led to VOA becoming an early licensee of RealAudio.<br><br>It may have been through Geoff's auspices that we managed to get Vice President Al Gore to record an introduction for the debut of our VOA Internet Audio service.  I pulled a tape of one of Gore's speeches from our library so I could figure out what vocabulary and cadences he was comfortable with, then wrote a short script for him to voice -- not knowing how much of it would survive.  I guess his staff thought it was okay because he read it essentially as I wrote it.  But either I had failed to match his speaking style or he wasn't concentrating during the recording session, because his delivery was stilted and his emphasis was labored.  I would have preferred quietly to scrap it, but it was such a big deal to have the Vice President of the United States introduce our new audio service that dumping it was not an option.<br><br>The software I wrote to drive the newswire and audio services happily cranked along, unattended, for years.  I turned the site over to our parent agency's public relations people shortly after we started serving audio, and my staff and I reverted to our more accustomed role as their technical service provider.  Five years later, in 1999, the agency created an Office of Internet Services to manage a growing inventory of web sites and, in 2000, our Office of Engineering began streaming live audio of VOA programs on the 'Net.<br><br>Chris Kern<br>Washington, D.C.<br>December, 2006<br><br><A HREF="mailto:Christopher.Kern@Gmail.COM">Christopher.Kern@Gmail.COM</A><br><br><br>
-
-
-
-
-<BR>
-
-</td>
-<td valign="top" align="right">
-
-
-
-</td></tr>
-</table>
-</td></tr></table>
-</BODY>
-
-<!-- Mirrored from 127.0.0.1:8500/ICSWEB08/wwwroot/papers/vp01.cfm?outfit=pmt&folder=141&paper=2766 by HTTrack Website Copier/3.x [XR&CO'2013], Fri, 19 Jul 2013 13:38:48 GMT -->
-</HTML>
