@@ -18,3 +18,5 @@ From 1995, Phil maintained a website to serve as a key resource for matters rela
 * War Reporting
 
 In 2014, the School of Media and Communication archived the contents of that site at media.leeds.ac.uk/papers using [httrack](https://www.httrack.com/). In 2019, the School of Media and Communication website was redeveloped in a new system and this archive went offline. On 16th September 2020, the site was placed here (in the [gh-pages](https://github.com/universityofleeds/philtaylorpapers/tree/gh-pages) branch) to facilitate the archiving of the site in the [UK Web Archive](https://www.webarchive.org.uk/)
+
+https://universityofleeds.github.io/philtaylorpapers/
